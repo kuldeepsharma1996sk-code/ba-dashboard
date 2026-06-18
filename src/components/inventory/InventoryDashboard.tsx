@@ -222,7 +222,6 @@ export default function InventoryDashboard() {
                     >
                       <option value="All">All Status</option>
                       <option value="Healthy">Healthy (&gt;0)</option>
-                      <option value="Out of Stock">Out of Stock (=0)</option>
                     </select>
                   </div>
                 </div>

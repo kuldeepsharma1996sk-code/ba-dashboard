@@ -6,7 +6,7 @@ export default function KPIGrid({ lowStockItems = [] }: { lowStockItems?: any[] 
   const totalOutOfStock = lowStockItems.length;
 
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid grid-cols-3 gap-4">
       {/* Total SKUs */}
       <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
         <div className="text-[10px] uppercase font-bold text-slate-500 mb-1">TOTAL SKUS</div>
@@ -49,21 +49,6 @@ export default function KPIGrid({ lowStockItems = [] }: { lowStockItems?: any[] 
         </div>
       </div>
 
-      {/* Out of Stock */}
-      <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
-        <div className="text-[10px] uppercase font-bold text-red-500 mb-1">OUT OF STOCK</div>
-        <div className="flex items-center justify-between">
-          <div>
-            <div className="text-2xl font-bold text-slate-800">{totalOutOfStock}</div>
-            <div className="text-[10px] text-slate-500 mt-1">
-              <span className="font-semibold">{outOfStockMedia}</span> Media • <span className="font-semibold">{outOfStockElectrical}</span> Electrical
-            </div>
-          </div>
-          <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center border border-red-100">
-            <AlertTriangle className="w-5 h-5 text-red-500" />
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
